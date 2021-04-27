@@ -20,6 +20,12 @@ export const Home = () => {
         <div className="row">
           <div className="col-md-12">
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+              <div className="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="1" aria-label="Slide-1"></button>
+                <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+
               <div className="carousel-inner" style={{width:"100%", height:"500px"}}>
                 <div className="carousel-item active">
                   <img src={slide1}  class="d-block w-100" alt="..."></img>
