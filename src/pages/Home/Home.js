@@ -1,8 +1,9 @@
 import React from "react";
 import { PageHeader } from "antd";
 import slide1 from "../../img/drums-set-people-man.jpg"
-import slide2 from "../../img/31e32d93be0f2ac2cf246f3502c3043a.jpg"
+import slide2 from "../../img/photo-1535587566541-97121a128dc5.jpg"
 import slide3 from "../../img/piano-wallpaper-hd-11.jpg"
+import "./Home.css"
 
 export const Home = () => {
   return (
@@ -26,15 +27,27 @@ export const Home = () => {
                 <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="2" aria-label="Slide 3"></button>
               </div>
 
-              <div className="carousel-inner" style={{width:"100%", height:"500px"}}>
+              <div className="carousel-inner" >
                 <div className="carousel-item active">
                   <img src={slide1}  class="d-block w-100" alt="..."></img>
+                  <div className="carousel-caption d-md-block bg-danger">
+                    <h5>“Music is the moonlight in the gloomy night of life.”</h5>
+                    <p>-John Paul Friedrich Richter-</p>
+                  </div>
                 </div>
-              <div className="carousel-item" style={{width:"100%", height:"500px"}}>
+              <div className="carousel-item">
                 <img src={slide2}  class="d-block w-100" alt="..."></img>
+                <div className="carousel-caption d-md-block bg-danger">
+                    <h5>“Music is the literature of the heart; it commences where speech ends.”</h5>
+                    <p>-Alphonse de Lamartine-</p>
+                  </div>
               </div>
-              <div className="carousel-item" style={{width:"100%", height:"500px"}}>
+              <div className="carousel-item">
                 <img src={slide3}  class="d-block w-100" alt="..."></img>
+                <div className="carousel-caption d-md-block bg-danger">
+                    <h5>“Music expresses feeling and thought, without language; it was below and before speech, and it is above and beyond all words.”</h5>
+                    <p>-Robert G. Ingersoll-</p>
+                  </div>
               </div>
             </div>
             <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
