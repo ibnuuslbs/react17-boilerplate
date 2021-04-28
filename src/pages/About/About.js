@@ -15,7 +15,7 @@ export const About = () => {
         >
         </PageHeader>
         
-        <div id="aboutcard"className="mb-3" style={{ boxShadow: '0px 5px 20px  rgba(0,0,0,0.2)', backgroundColor: '#edeff2'}}>
+        <div id="aboutcard"className="mb-3" style={{ boxShadow: '0px 5px 20px  rgba(0,0,0,0.2)', backgroundColor: '#ffffff'}}>
   <div className="row g-0"> 
     <div className="col-md-4">
       <img src={logo} alt="..." width="300"/>
