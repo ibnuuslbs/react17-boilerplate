@@ -1,24 +1,22 @@
+// import { Button, PageHeader } from "antd";
+// import { About } from "../About/About";
 import React from "react";
-import { PageHeader } from "antd";
-import "./Home.css"
+import { Link } from "react-router-dom";
+import "./Home.css";
 import { Slider } from "./Slider";
+import { Product } from "../Product/Product";
 
 export const Home = () => {
   return (
     <div>
-      <PageHeader
-        style={{
-          padding: 0,
-          margin: 0,
-          height: 40,
-          backgroundColor: "transparent",
-        }}
-        title={""}
-      ></PageHeader>
-      < div className="container">
+      <div>
         <Slider />
+        <Link to={'/app/product'} className="btn btn-outline-danger" style={{float: "right", zIndex: 1}}>
+					<span>See All</span>
+				</Link>
+        <Product />
       </div>
     </div>
-   
   );
 };
+
