@@ -17,6 +17,7 @@ export const AppRoute = () => {
         <Route path="/app" exact>
             <Redirect to={'/app/home'} />
         </Route>
+        
     </Switch>
     // <About/>
 }
