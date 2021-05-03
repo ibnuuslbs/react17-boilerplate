@@ -1,4 +1,4 @@
-@import '~antd/dist/antd.less';
+@import "~antd/dist/antd.less";
 
 @font-size-base: 16px; // major text font size
 //@primary-color: #ffd037; // primary color for all components
@@ -18,16 +18,15 @@
 @border-color-base: #d9d9d9; // major border color
 @box-shadow-base: @shadow-2; // major shadow for layers
 //@background-color-base: #e3e8ee;
-@background-color-base: #e3e8ee;
+@background-color-base: #f8f8f8;
 @link-decoration: none;
 
 body {
-  font-family: 'Montserrat Alternates', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
-  'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
-  'Noto Color Emoji';
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
   -webkit-font-smoothing: antialiased;
   background-color: @background-color-base;
   font-weight: 400;
+  letter-spacing: 0.25px;
   color: #1a1f36;
 }
 
@@ -46,7 +45,6 @@ body {
 @layout-zero-trigger-width: 36px;
 @layout-zero-trigger-height: 42px;
 
-
 // Statistic
 // ---
 
@@ -60,8 +58,8 @@ body {
 @menu-collapsed-width: 40px;
 @layout-header-padding: 0 24px;
 
-
-@card-shadow: 0 7px 14px 0 rgba(60, 66, 87, 0.12), 0 3px 6px 0 rgba(0, 0, 0, 0.12);
+@card-shadow: 0 7px 14px 0 rgba(60, 66, 87, 0.12),
+  0 3px 6px 0 rgba(0, 0, 0, 0.12);
 
 @select-item-selected-bg: transparent;
 @menu-item-active-bg: transparent;
@@ -71,7 +69,8 @@ body {
 @select-selection-item-border-color: transparent;
 @menu-inline-toplevel-item-height: 20px;
 @menu-item-height: 20px;
-@shadow-2: 0 7px 14px 0 rgba(60, 66, 87, 0.5), 0 3px 6px 0 rgba(241, 241, 241, 0.5);
+@shadow-2: 0 7px 14px 0 rgba(60, 66, 87, 0.5),
+  0 3px 6px 0 rgba(241, 241, 241, 0.5);
 
 // Menu
 // ---
@@ -81,7 +80,10 @@ body {
 //Dropdown
 @dropdown-menu-bg: transparent;
 @btn-border-width: 0;
-@btn-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.12) 0px 1px 1px 0px, rgba(60, 66, 87, 0.16) 0px 0px 0px 1px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(60, 66, 87, 0.12) 0px 2px 5px 0px;
+@btn-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+  rgba(0, 0, 0, 0.12) 0px 1px 1px 0px, rgba(60, 66, 87, 0.16) 0px 0px 0px 1px,
+  rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+  rgba(60, 66, 87, 0.12) 0px 2px 5px 0px;
 
 // Button
 @btn-height-base: 28px;
@@ -93,7 +95,4 @@ body {
 
 @no-shadow: none;
 
-
 @table-header-bg: #f7fafc;
-
-
