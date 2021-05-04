@@ -3,7 +3,7 @@ import {  } from '@ant-design/icons';
 
 
 export const Detail = () => {
-    const {Title, Text} = Typography;
+    const {Title, Text, Paragraph} = Typography;
     return(
         <Row>
         <Col span={18} offset={3}>
@@ -19,14 +19,18 @@ export const Detail = () => {
                 <Col span={12}>
                     <Image
                         width={200}
-                        src="..."
+                        src="https://unsplash.com/photos/6NpYOFB3VCI"
                     />
                 </Col>
                 <Col span={12}>
                     <Title level={4} strong>Rp. 20.000.000,-</Title>
                     <Text>Status: </Text>
                     <Divider style={{ borderWidth:1, borderColor: '#787878'}} />
-                    <Text></Text>
+                    <Paragraph>
+                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce cursus, sem non aliquet maximus, quam orci porta turpis, eget efficitur ex lacus quis erat. Vestibulum urna ante, tempor ac iaculis sed, facilisis a eros. Cras maximus, sapien vel vehicula laoreet, odio ante euismod mi, in scelerisque velit turpis a orci. Cras at quam libero. Sed nisi est, dapibus ut leo non, fringilla bibendum ex. Sed ante tellus, rhoncus eu venenatis vel, condimentum sed augue. 
+                    </Paragraph>
+                    <Divider style={{ bordeColor:1, borderColor: '#787878'}} />
+
                 </Col>
             </Row>
         </Col>
