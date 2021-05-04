@@ -15,9 +15,9 @@ export const Home = () => {
         {/* <Link to={'/app/product'} className="btn btn-outline-danger" style={{float: "right", zIndex: 1}}>
 					<span>See All</span>
 				</Link> */}
+        <About />
         <Link to="/app/product"><Button type="primary" style={{float: "right"}}>See All</Button></Link>
         <Product numberOfItems={4}/>
-        <About />
       </div>
     </div>
   );

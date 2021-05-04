@@ -10,6 +10,9 @@ import {Detail} from "../pages/Detail/Detail";
 
 export const AppRoute = () => {
     return <Switch>
+        <Route path="/app" exact>
+            <Redirect to={'/app/home'} />
+        </Route>
         <Route path={"/app/home"}>
             <Home/>
         </Route>
