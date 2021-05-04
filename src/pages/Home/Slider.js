@@ -26,7 +26,7 @@ export const Slider = () => {
       ];
       
     return (
-        <div className="row">
+        <div className="row" style={{paddingBottom: "10%"}}>
           <div className="col-md-12">
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
               <div className="carousel-indicators">

@@ -28,15 +28,15 @@ export const DesktopLayout = () => {
         width={240}
         style={{
           overflowX: "hidden",
+          backgroundColor: "#ffffff",
           bottom: 0,
+          boxShadow: "5px 0px 9px 0px rgba(0,0,0,0.1)",
+          webkitBoxShadow: "5px 0px 9px 0px rgba(0,0,0,0.1)",
+          mozBoxShadow: "5px 0px 9px 0px rgba(0,0,0,0.1)",
           justifyContent: "flex-start",
           paddingTop: 20,
           paddingLeft: 20,
           position: "fixed",
-          backgroundColor: "#ffffff",
-          boxShadow: "5px 0px 12px 0px rgba(0,0,0,0.2)",
-          webkitBoxShadow: "5px 0px 12px 0px rgba(0,0,0,0.2)",
-          mozBoxShadow: "5px 0px 12px 0px rgba(0,0,0,0.2)",
           top: 0,
           zIndex: 10,
         }}
@@ -52,12 +52,12 @@ export const DesktopLayout = () => {
               margin: 0,
               padding: 0,
               fontSize: 25,
-              marginLeft: 5,
+              marginLeft: 15,
               fontWeight: 600,
               color: "#413d3e",
             }}
           >
-            Boilerplate
+            coda.com
           </Paragraph>
         </div>
         <MenuList closeLeftDrawer={() => {}} />
@@ -135,9 +135,10 @@ export const DesktopLayout = () => {
           style={{
             // maxWidth: 1024,
             // marginTop: 32,
-            paddingLeft: "5%",
             paddingTop: "40px",
             paddingRight: "10%",
+            paddingLeft: "100px",
+            
           }}
         >
           <AppRoute />
