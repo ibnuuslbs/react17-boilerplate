@@ -9,6 +9,9 @@ import {Product} from "../pages/Product/Product";
 
 export const AppRoute = () => {
     return <Switch>
+        <Route path="/app" exact>
+            <Redirect to={'/app/home'} />
+        </Route>
         <Route path={"/app/home"}>
             <Home/>
         </Route>
@@ -17,9 +20,6 @@ export const AppRoute = () => {
         </Route>
         <Route path={"/app/product"}>
             <Product/>
-        </Route>
-        <Route path="/app" exact>
-            <Redirect to={'/app/home'} />
         </Route>
         
         

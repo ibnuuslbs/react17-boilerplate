@@ -99,7 +99,8 @@ export const Product = (props) => {
           hoverable
           style={{ 
             width: "17rem",
-            margin: "5px",
+            margin: "7px",
+            paddingTop: "25px",
             padding: "15px",
             border: "none",
           }}
