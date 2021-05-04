@@ -6,6 +6,7 @@ import {App} from "../pages/App/App";
 import {Home} from "../pages/Home/Home";
 import {About} from "../pages/About/About";
 import {Product} from "../pages/Product/Product";
+import {Detail} from "../pages/Detail/Detail";
 
 export const AppRoute = () => {
     return <Switch>
@@ -21,6 +22,10 @@ export const AppRoute = () => {
         <Route path="/app" exact>
             <Redirect to={'/app/home'} />
         </Route>
+        <Route path={"/app/detail"}>
+            <Detail/>
+        </Route>
+
         
         
     </Switch>
