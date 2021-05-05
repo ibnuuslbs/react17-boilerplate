@@ -12,8 +12,8 @@ const data = [
     qty: 1,
   },
   {
-    key: 1,
-    image: drum1,
+    key: 2,
+    image: drum2,
     title: "TAMA STAR Bubinga Drum Set",
     price: "Rp 20.000.000,-",
     qty: 1,
