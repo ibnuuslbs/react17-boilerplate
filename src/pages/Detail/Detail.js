@@ -7,7 +7,6 @@ import img1 from "../../img/products/drum1.png";
 
 export const Detail = () => {
     const {Title, Text, Paragraph} = Typography;
-<<<<<<< HEAD
 
     function onChange(value) {
         console.log('changed', value);
@@ -16,8 +15,6 @@ export const Detail = () => {
     const { TabPane } = Tabs;
 
 
-=======
->>>>>>> cd4819ff661469bc8fac9f94d7a5485c8283921c
     return(
         <Row>
         <Col span={18} offset={3}>
