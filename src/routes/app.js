@@ -7,6 +7,7 @@ import {Home} from "../pages/Home/Home";
 import {About} from "../pages/About/About";
 import {Product} from "../pages/Product/Product";
 import {Detail} from "../pages/Detail/Detail";
+import {Cart} from "../pages/Cart/Cart";
 
 export const AppRoute = () => {
     return <Switch>
@@ -22,11 +23,11 @@ export const AppRoute = () => {
         <Route path={"/app/product"}>
             <Product/>
         </Route>
-        <Route path="/app" exact>
-            <Redirect to={'/app/home'} />
-        </Route>
         <Route path={"/app/detail"}>
             <Detail/>
+        </Route>
+        <Route path={"/app/cart"}>
+            <Cart/>
         </Route>
 
         
