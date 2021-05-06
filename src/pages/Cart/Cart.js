@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Table, Row, Col, Card, PageHeader, Button, Divider } from "antd";
+import { Table, Row, Col, Card, PageHeader, Button, Divider, InputNumber } from "antd";
 import drum1 from "../../img/products/drum1.png";
 import drum2 from "../../img/products/drum2.png";
 
@@ -30,7 +30,7 @@ const columns = [
 },
 {
     title: "Quantity",
-    render: (data) => <a>{data.qty}</a>,
+    render: (data) => <InputNumber min={1} max={10} defaultValue={1} />,
 },
 {
     title: "Subtotal",
@@ -81,7 +81,7 @@ export class Cart extends React.Component {
                 }}
               >
                 {hasSelected ? (
-                    <Button style={{ marginRight: 20 }}>Clear</Button>
+                    <Button type="primary" style={{ marginRight: 20 }}>Clear</Button>
                     ) : (
                         <></>
                         )}
@@ -123,7 +123,7 @@ export class Cart extends React.Component {
                     <Col style={{marginLeft: "25%"}}><span>{hasSelected ? `Rp 20.000.000,-` : ""}
                         </span></Col>
                 </Row>
-                <Button block type="primary">Checkout</Button>
+                <Button block type="primary" style={{lineHeight: "50px", height:"50px", marginTop: 20}}>Checkout</Button>
             </Card>
           </Col>
         </Row>
