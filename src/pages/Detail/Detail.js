@@ -2,7 +2,7 @@ import {Typography, Row, Col, Divider, Rate, Space, Image} from 'antd';
 import { Tabs } from 'antd';
 import { InputNumber } from 'antd';
 import { Button } from 'antd';
-import { ShoppingCartOutlined, HeartOutlined } from '@ant-design/icons';
+import { ShoppingCartOutlined, HeartOutlined, HeartFilled } from '@ant-design/icons';
 import img1 from "../../img/products/drum1.png";
 
 export const Detail = () => {
@@ -13,6 +13,10 @@ export const Detail = () => {
     }
 
     const { TabPane } = Tabs;
+
+    function onIconClick() {
+        // <HeartFilled style={{ fontSize: '200%', color: '#FF0000'}}/>  
+      }
 
 
     return(
@@ -49,20 +53,20 @@ export const Detail = () => {
                         <Button type="primary" shape="round" icon={<ShoppingCartOutlined />} size='large'>
                            Add to cart
                         </Button> 
-                        <HeartOutlined style={{ fontSize: '200%', color: '#FF0000'}} />     
+                        <HeartOutlined style={{ fontSize: '200%', color: '#FF0000'}} onClick={onIconClick}/>     
                     </Space>
                     <Divider style={{ borderWidth:1, borderColor: '#787878'}} />
                     <Text>Categories: </Text>
                 </Col>
                     {/* <Divider style={{ borderWidth:3, borderColor: '#FF0000'}} /> */}
                     <Tabs tabBarExtraContent>
-                        <TabPane tab="Description" key="1">
+                        <TabPane tab="Description" style={{fontsSize: '200px'}} key="1">
                             <Paragraph>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                             </Paragraph>
                         </TabPane>
                         <TabPane tab="Specification" key="2">
-                            Content of tab 2
+                            Specification
                         </TabPane>
                     </Tabs>
             </Row>

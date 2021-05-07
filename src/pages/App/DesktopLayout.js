@@ -23,7 +23,7 @@ export const DesktopLayout = () => {
         height: "100vh",
       }}
     >
-      <Sider
+      {/* <Sider
         className={"transparent"}
         width={240}
         style={{
@@ -61,11 +61,11 @@ export const DesktopLayout = () => {
           </Paragraph>
         </div>
         <MenuList closeLeftDrawer={() => {}} />
-      </Sider>
+      </Sider> */}
 
       <Layout
         style={{
-          paddingLeft: 240,
+          paddingLeft: 100,
         }}
       >
         <Header
@@ -80,7 +80,9 @@ export const DesktopLayout = () => {
             alignItems: "center",
             justifyContent: "flex-end",
           }}
+          
         >
+          <MenuList closeLeftDrawer={() => {}} />
           <Popover
             autoAdjustOverflow={true}
             placement="bottomRight"
