@@ -1,5 +1,14 @@
 import React, { useState } from "react";
-import { Table, Row, Col, Card, PageHeader, Button, Divider, InputNumber } from "antd";
+import {
+  Table,
+  Row,
+  Col,
+  Card,
+  PageHeader,
+  Button,
+  Divider,
+  InputNumber,
+} from "antd";
 import drum1 from "../../img/products/drum1.png";
 import drum2 from "../../img/products/drum2.png";
 
@@ -17,7 +26,7 @@ const data = [
     title: "TAMA STAR Bubinga Drum Set",
     price: "Rp 20.000.000,-",
     qty: 1,
-  }
+  },
 ];
 const columns = [
   {
@@ -27,16 +36,21 @@ const columns = [
   {
     title: "Name",
     render: (data) => <a>{data.title}</a>,
-},
-{
+  },
+  {
     title: "Quantity",
-    render: (data) => <InputNumber min={1} max={10} defaultValue={1} />,
-},
-{
+    render: (data) => (
+      <InputNumber min={1} max={10} defaultValue={1} onChange={onChange} />
+    ),
+  },
+  {
     title: "Subtotal",
     render: (data) => <a>{data.price}</a>,
   },
 ];
+function onChange(value) {
+  console.log("changed", value);
+}
 
 export class Cart extends React.Component {
   state = {
@@ -60,31 +74,38 @@ export class Cart extends React.Component {
       <div>
         <Row>
           <Col flex={4}>
-            <Card style={{border: "none", boxShadow: "0px 10px 30px rgb(0 0 0 / 5%)"}}>
-            <PageHeader
+            <Card
               style={{
-                padding: 0,
-                marginBottom: 10,
-                height: 40,
-                backgroundColor: "transparent",
-                zIndex: 0,
+                border: "none",
+                boxShadow: "0px 10px 30px rgb(0 0 0 / 5%)",
               }}
-              title={"Cart"}
-            ></PageHeader>
-            <Divider />
+            >
+              <PageHeader
+                style={{
+                  padding: 0,
+                  marginBottom: 10,
+                  height: 40,
+                  backgroundColor: "transparent",
+                  zIndex: 0,
+                }}
+                title={"Cart"}
+              ></PageHeader>
+              <Divider />
               <div
                 style={{
-                    marginBottom: 16,
-                    width: "100%",
-                    display: "flex",
-                    flexDirection: "row",
+                  marginBottom: 16,
+                  width: "100%",
+                  display: "flex",
+                  flexDirection: "row",
                 }}
               >
                 {hasSelected ? (
-                    <Button type="primary" style={{ marginRight: 20 }}>Clear</Button>
-                    ) : (
-                        <></>
-                        )}
+                  <Button type="primary" style={{ marginRight: 20 }}>
+                    Clear
+                  </Button>
+                ) : (
+                  <></>
+                )}
                 <span style={{ marginLeft: 5 }}>
                   {hasSelected
                     ? `Selected ${selectedRowKeys.length} items`
@@ -99,31 +120,51 @@ export class Cart extends React.Component {
             </Card>
           </Col>
           <Col flex={2}>
-            <Card style={{ marginLeft: 10, minWidth: "120%", border: "none", boxShadow: "0px 10px 30px rgb(0 0 0 / 5%)"}}>
-            <PageHeader
+            <Card
               style={{
+                marginLeft: 10,
+                minWidth: "120%",
+                border: "none",
+                boxShadow: "0px 10px 30px rgb(0 0 0 / 5%)",
+              }}
+            >
+              <PageHeader
+                style={{
                   padding: 0,
                   marginBottom: 10,
                   height: 40,
                   backgroundColor: "transparent",
                   zIndex: 0,
                 }}
-              title={"Order Summary"}
-            ></PageHeader>
-                <Divider />
-                <Row>
-                    <Col><span>Items {hasSelected ? `(${selectedRowKeys.length})` : ""}
-                        </span></Col>
-                    <Col style={{marginLeft: "30%"}}><span>{hasSelected ? `Rp 20.000.000,-` : ""}
-                        </span></Col>
-                </Row>
-                <Divider />
-                <Row>
-                    <Col><h5>Subtotal</h5></Col>
-                    <Col style={{marginLeft: "25%"}}><span>{hasSelected ? `Rp 20.000.000,-` : ""}
-                        </span></Col>
-                </Row>
-                <Button block type="primary" style={{lineHeight: "50px", height:"50px", marginTop: 20}}>Checkout</Button>
+                title={"Order Summary"}
+              ></PageHeader>
+              <Divider />
+              <Row>
+                <Col>
+                  <span>
+                    Items {hasSelected ? `(${selectedRowKeys.length})` : ""}
+                  </span>
+                </Col>
+                <Col style={{ marginLeft: "30%" }}>
+                  <span>{hasSelected ? `Rp 20.000.000,-` : ""}</span>
+                </Col>
+              </Row>
+              <Divider />
+              <Row>
+                <Col>
+                  <h5>Subtotal</h5>
+                </Col>
+                <Col style={{ marginLeft: "25%" }}>
+                  <span>{hasSelected ? `Rp 20.000.000,-` : ""}</span>
+                </Col>
+              </Row>
+              <Button
+                block
+                type="primary"
+                style={{ lineHeight: "50px", height: "50px", marginTop: 20 }}
+              >
+                Checkout
+              </Button>
             </Card>
           </Col>
         </Row>

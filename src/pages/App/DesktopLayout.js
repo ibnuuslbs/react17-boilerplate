@@ -31,8 +31,8 @@ export const DesktopLayout = () => {
           backgroundColor: "#ffffff",
           bottom: 0,
           boxShadow: "5px 0px 9px 0px rgba(0,0,0,0.1)",
-          webkitBoxShadow: "5px 0px 9px 0px rgba(0,0,0,0.1)",
-          mozBoxShadow: "5px 0px 9px 0px rgba(0,0,0,0.1)",
+          WebkitBoxShadow: "5px 0px 9px 0px rgba(0,0,0,0.1)",
+          MozBoxShadow: "5px 0px 9px 0px rgba(0,0,0,0.1)",
           justifyContent: "flex-start",
           paddingTop: 20,
           paddingLeft: 20,
@@ -138,7 +138,6 @@ export const DesktopLayout = () => {
             paddingTop: "40px",
             paddingRight: "10%",
             paddingLeft: "100px",
-            
           }}
         >
           <AppRoute />
