@@ -11,6 +11,7 @@ import {
 } from "antd";
 import drum1 from "../../img/products/drum1.png";
 import drum2 from "../../img/products/drum2.png";
+import { Item } from "./Item";
 
 const data = [
   {
@@ -91,7 +92,8 @@ export class Cart extends React.Component {
                 title={"Cart"}
               ></PageHeader>
               <Divider />
-              <div
+                <Item />
+              {/* <div
                 style={{
                   marginBottom: 16,
                   width: "100%",
@@ -116,10 +118,10 @@ export class Cart extends React.Component {
                 rowSelection={rowSelection}
                 columns={columns}
                 dataSource={data}
-              />
+              /> */}
             </Card>
           </Col>
-          <Col flex={2}>
+          <Col flex={1}>
             <Card
               style={{
                 marginLeft: 10,
