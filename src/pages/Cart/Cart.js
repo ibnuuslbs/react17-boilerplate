@@ -74,7 +74,7 @@ export class Cart extends React.Component {
     return (
       <div>
         <Row>
-          <Col flex={4}>
+          <Col flex="950px">
             <Card
               style={{
                 border: "none",
@@ -143,9 +143,9 @@ export class Cart extends React.Component {
               <Divider />
               <Row>
                 <Col>
-                  <span>
+                  <h6>
                     Items {hasSelected ? `(${selectedRowKeys.length})` : ""}
-                  </span>
+                  </h6>
                 </Col>
                 <Col style={{ marginLeft: "30%" }}>
                   <span>{hasSelected ? `Rp 20.000.000,-` : ""}</span>

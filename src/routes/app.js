@@ -8,6 +8,7 @@ import {About} from "../pages/About/About";
 import {Product} from "../pages/Product/Product";
 import {Detail} from "../pages/Detail/Detail";
 import {Cart} from "../pages/Cart/Cart";
+import {Checkout} from "../pages/Cart/Checkout";
 
 export const AppRoute = () => {
     return <Switch>
@@ -28,6 +29,9 @@ export const AppRoute = () => {
         </Route>
         <Route path={"/app/cart"}>
             <Cart/>
+        </Route>
+        <Route path={"/app/checkout"}>
+            <Checkout/>
         </Route>
 
         
