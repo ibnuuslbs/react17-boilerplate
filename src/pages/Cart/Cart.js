@@ -163,6 +163,7 @@ export class Cart extends React.Component {
               <Button
                 block
                 type="primary"
+                key="link" href="/app/checkout"
                 style={{ lineHeight: "50px", height: "50px", marginTop: 20 }}
               >
                 Checkout
