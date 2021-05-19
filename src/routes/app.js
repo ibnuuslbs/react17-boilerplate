@@ -8,7 +8,7 @@ import {About} from "../pages/About/About";
 import {Product} from "../pages/Product/Product";
 import {Detail} from "../pages/Detail/Detail";
 import {Cart} from "../pages/Cart/Cart";
-import {Checkout} from "../pages/Cart/Checkout";
+import {Checkout} from "../pages/Checkout/Checkout";
 
 export const AppRoute = () => {
     return <Switch>

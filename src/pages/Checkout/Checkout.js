@@ -1,11 +1,35 @@
 import React, { useState } from "react";
 import { Row, Col, Card, PageHeader, Button, Divider, Tabs, Modal } from "antd";
 
-import { Item } from "./Item";
-import { Shipping } from "./Shipping";
+import { Item } from "../Cart/Item";
+import { Address, AddressModal } from "./Address";
 import { FormAddress } from "./FormAddress";
 
-export const Checkout = () => {
+export const Checkout = (props) => {
+  const [selected, setSelected] = useState(1)
+  const [selectId, setSelectId] = useState(0)
+  const [setAddress, getAddress] = useState([
+    {
+      id: 1,
+      name: "Dinda Ragil",
+      phone: "012345678901",
+      province: "East Java",
+      city: "Malang",
+      detail: "RT 07 RW 07 Sawojajar, Kedungkandang",
+      postcode: "65139",
+      
+    },
+    {
+      id: 2,
+      name: "Ragil",
+      phone: "012345678901",
+      province: "West Java",
+      city: "Bekasi",
+      detail: "RT 03 RW 03 Jatibening Baru, Pondok Gede",
+      postcode: "17412",
+    },
+  ]);
+
   const { TabPane } = Tabs;
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [isModal1Visible, setIsModal1Visible] = useState(false);
@@ -16,8 +40,9 @@ export const Checkout = () => {
 
   const handleOk = () => {
     setIsModalVisible(false);
+    setSelected(selectId);
+    setSelectId(0);
   };
-
   const handleCancel = () => {
     setIsModalVisible(false);
   };
@@ -33,6 +58,18 @@ export const Checkout = () => {
   const handleCancel1 = () => {
     setIsModal1Visible(false);
   };
+
+  const eventCreateAddress = (address) => {
+    setAddress(getAddress.concat(address));
+    console.log(getAddress);
+  };
+
+  const handleSelected = (id) => {
+    setSelectId(id);
+    console.log(id)
+  }
+
+  
 
   return (
     <div>
@@ -59,46 +96,40 @@ export const Checkout = () => {
                 <Item />
               </TabPane>
               <TabPane tab="Shipping" key="2">
-                <Shipping numberOfAddress={1} />
+                <Address dataAddress={setAddress} selected={selected} />
                 <Row style={{ marginBottom: "20px", marginLeft: "20px" }}>
-                  <Button type="primary" onClick={showModal}>Change Address</Button>
+                  <Button type="primary" onClick={showModal}>
+                    Change Address
+                  </Button>
                   <Modal
-                visible={isModalVisible}
-                onCancel={handleCancel}
-                width={700}
-                footer={[
-                  <Button key="back" onClick={handleCancel}>
-                    Cancel
-                  </Button>,
-                  <Button
-                    type="primary"
-                    onClick={handleOk}
+                    visible={isModalVisible}
+                    onCancel={handleCancel}
+                    width={700}
+                    footer={[
+                      <Button key="back" onClick={handleCancel}>
+                        Cancel
+                      </Button>,
+                      <Button type="primary" onClick={handleOk}>
+                        Change
+                      </Button>,
+                    ]}
                   >
-                    Change
-                  </Button>,
-                ]}
-              >
-                <Shipping />
-              </Modal>
-                  <Button style={{ marginLeft: "10px" }} onClick={showModal1}>New Address</Button>
+                    <AddressModal onClick={handleSelected} dataAddress={setAddress} selected={selectId}/>
+                  </Modal>
+                  <Button style={{ marginLeft: "10px" }} onClick={showModal1}>
+                    New Address
+                  </Button>
                   <Modal
-                visible={isModal1Visible}
-                onCancel={handleCancel1}
-                width={700}
-                footer={[
-                  <Button key="back" onClick={handleCancel1}>
-                    Cancel
-                  </Button>,
-                  <Button
-                    type="primary"
-                    onClick={handleOk1}
+                    visible={isModal1Visible}
+                    onCancel={handleCancel1}
+                    width={700}
+                    title="New Address"
+                    footer={[
+                      
+                    ]}
                   >
-                    Submit
-                  </Button>,
-                ]}
-              >
-                <FormAddress />
-              </Modal>
+                    <FormAddress onCreateAddress={eventCreateAddress} />
+                  </Modal>
                 </Row>
               </TabPane>
               <TabPane tab="Payment" key="3">
@@ -134,7 +165,7 @@ export const Checkout = () => {
             </Row>
             <Row style={{ marginTop: "15px" }}>
               <Col>
-                <h6>Shipping</h6>
+                <h6>Address</h6>
               </Col>
             </Row>
             <Divider />
