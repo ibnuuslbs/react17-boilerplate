@@ -1,76 +1,18 @@
 import React, { useState } from "react";
 import {
-  Table,
   Row,
   Col,
   Card,
   PageHeader,
   Button,
   Divider,
-  InputNumber,
 } from "antd";
 import drum1 from "../../img/products/drum1.png";
 import drum2 from "../../img/products/drum2.png";
 import { Item } from "./Item";
 
-const data = [
-  {
-    key: 1,
-    image: drum1,
-    title: "TAMA STAR Bubinga Drum Set",
-    price: "Rp 20.000.000,-",
-    qty: 1,
-  },
-  {
-    key: 2,
-    image: drum2,
-    title: "TAMA STAR Bubinga Drum Set",
-    price: "Rp 20.000.000,-",
-    qty: 1,
-  },
-];
-const columns = [
-  {
-    title: "Image",
-    render: (data) => <img src={data.image} style={{ width: "15rem" }}></img>,
-  },
-  {
-    title: "Name",
-    render: (data) => <a>{data.title}</a>,
-  },
-  {
-    title: "Quantity",
-    render: (data) => (
-      <InputNumber min={1} max={10} defaultValue={1} onChange={onChange} />
-    ),
-  },
-  {
-    title: "Subtotal",
-    render: (data) => <a>{data.price}</a>,
-  },
-];
-function onChange(value) {
-  console.log("changed", value);
-}
-
-export class Cart extends React.Component {
-  state = {
-    selectedRowKeys: [], // Check here to configure the default column
-    loading: false,
-  };
-
-  onSelectChange = (selectedRowKeys) => {
-    console.log("selectedRowKeys changed: ", selectedRowKeys);
-    this.setState({ selectedRowKeys });
-  };
-
-  render() {
-    const { selectedRowKeys } = this.state;
-    const rowSelection = {
-      selectedRowKeys,
-      onChange: this.onSelectChange,
-    };
-    const hasSelected = selectedRowKeys.length > 0;
+export const Cart = () => {
+    
     return (
       <div>
         <Row>
@@ -144,11 +86,10 @@ export class Cart extends React.Component {
               <Row>
                 <Col>
                   <h6>
-                    Items {hasSelected ? `(${selectedRowKeys.length})` : ""}
+                    Items 
                   </h6>
                 </Col>
                 <Col style={{ marginLeft: "30%" }}>
-                  <span>{hasSelected ? `Rp 20.000.000,-` : ""}</span>
                 </Col>
               </Row>
               <Divider />
@@ -157,7 +98,6 @@ export class Cart extends React.Component {
                   <h5>Subtotal</h5>
                 </Col>
                 <Col style={{ marginLeft: "25%" }}>
-                  <span>{hasSelected ? `Rp 20.000.000,-` : ""}</span>
                 </Col>
               </Row>
               <Button
@@ -174,4 +114,4 @@ export class Cart extends React.Component {
       </div>
     );
   }
-}
+
