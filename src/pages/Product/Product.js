@@ -129,6 +129,7 @@ export const Product = (props) => {
               <Modal
                 visible={isModalVisible}
                 onCancel={handleCancel}
+                centered
                 width={300}
                 footer={[
                   <Button key="back" onClick={handleCancel}>
