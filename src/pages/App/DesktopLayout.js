@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Layout, Menu, PageHeader, Popover, Typography } from "antd";
+import { Button, Layout, Menu, PageHeader, Popover, Typography, Avatar } from "antd";
 import { MenuList } from "./MenuList";
 import { Link } from "react-router-dom";
 import { UserOutlined } from "@ant-design/icons";
@@ -126,11 +126,14 @@ export const DesktopLayout = () => {
             visible={clicked}
             onVisibleChange={() => setClicked(!clicked)}
           >
-            <Button
-              size={"default"}
-              style={{}}
-              icon={<UserOutlined style={{ fontSize: "13px" }} />}
-            />
+            <Avatar
+      style={{
+        color: '#ed1f24',
+        backgroundColor: '#fccecf',
+      }}
+    >
+      A
+    </Avatar>
           </Popover>
         </Header>
         <Content
