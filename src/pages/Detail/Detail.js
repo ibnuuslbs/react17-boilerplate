@@ -2,7 +2,7 @@ import {Typography, Row, Col, Divider, Rate, Space, Image} from 'antd';
 import { Tabs } from 'antd';
 import { InputNumber } from 'antd';
 import { Button } from 'antd';
-import { ShoppingCartOutlined, HeartOutlined, HeartFilled } from '@ant-design/icons';
+import { ShoppingCartOutlined} from '@ant-design/icons';
 import img1 from "../../img/products/drum1.png";
 
 export const Detail = () => {
@@ -14,13 +14,8 @@ export const Detail = () => {
 
     const { TabPane } = Tabs;
 
-    function onIconClick() {
-        // <HeartFilled style={{ fontSize: '200%', color: '#FF0000'}}/>  
-      }
-
-
     return(
-        <Row>
+        <Row style={{padding: "5% 0 5% 0"}}>
         <Col span={18} offset={3}>
             <Title level={3} strong>Lorem ipsum dolor sit amet</Title>
             <Row>
@@ -31,10 +26,10 @@ export const Detail = () => {
             </Row>
             <Divider style={{ borderWidth:1, borderColor: '#787878'}} />
             <Row>
-                <Col span={12}>
+            <Col span={12} style={{padding: "5%"}}>
                     <Image
-                        width={500}
                         src={img1}
+                        style={{width: "100%"}}
                     />
                 </Col>
                 <Col span={12}>
@@ -53,7 +48,6 @@ export const Detail = () => {
                         <Button type="primary" shape="round" icon={<ShoppingCartOutlined />} size='large'>
                            Add to cart
                         </Button> 
-                        <HeartOutlined style={{ fontSize: '200%', color: '#FF0000'}} onClick={onIconClick}/>     
                     </Space>
                     <Divider style={{ borderWidth:1, borderColor: '#787878'}} />
                     <Text>Categories: </Text>
