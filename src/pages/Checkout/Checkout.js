@@ -74,7 +74,7 @@ export const Checkout = (props) => {
   return (
     <div>
       <Row>
-        <Col flex="950px">
+        <Col flex="70%">
           <Card
             style={{
               border: "none",
@@ -138,11 +138,11 @@ export const Checkout = (props) => {
             </Tabs>
           </Card>
         </Col>
-        <Col flex={1}>
+        <Col flex="30%">
           <Card
             style={{
               marginLeft: 10,
-              minWidth: "120%",
+              minWidth: "100%",
               border: "none",
               boxShadow: "0px 10px 30px rgb(0 0 0 / 5%)",
             }}

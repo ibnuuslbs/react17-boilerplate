@@ -35,17 +35,17 @@ return(
     <Card bordered={false} >
       <h5 style={{marginBottom: "30px"}}>{items.merchant}</h5>
       <Row>
-      <Col flex="150px">      
+      <Col flex="20%">      
       <img src={items.image} style={{width: "120px"}} />
 </Col>
-      <Col flex="400px" style={{marginLeft: "20px"}} >
+      <Col flex="50%" style={{marginLeft: "20px"}} >
       <h6>{items.name}</h6>
       <p>{items.price}</p>
       </Col>
-      <Col flex="100px">
+      <Col flex="10%">
       <InputNumber style={{float: "right"}} min={1} max={10} defaultValue={1} onChange={changeQty} />
       </Col>
-      <Col flex="100px">
+      <Col flex="10%">
         <Button type="primary" style={{float: "right"}} icon={<DeleteFilled />}></Button>
       </Col>
     </Row>

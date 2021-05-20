@@ -65,7 +65,7 @@ export const DesktopLayout = () => {
 
       <Layout
         style={{
-          paddingLeft: 100,
+          paddingLeft: 0,
         }}
       >
         <Header
